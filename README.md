@@ -62,13 +62,12 @@
       ```  
 * **Install tensorflow see https://www.tensorflow.org/install/install_linux** 
   1. ```sudo apt-get install libcupti-dev```
-  2. Use virtualenv
+  2. Use virtualenv method
   3. ```sudo vim ~/.bashrc```, add the following lines: 
      ```  
      alias tfstart='source ~/tensorflow/bin/activate'   
      ```  
-  4. Test tensorflow, type ```tfstart```
-     Write a python3 program test.py
+  4. Test tensorflow, type ```tfstart```, write a python3 program test.py
      ```
      # Python
      import tensorflow as tf
@@ -76,5 +75,5 @@
      sess = tf.Session()
      print(sess.run(hello))
      ```
-     run ```python3 test.py```
+     then run ```python3 test.py```
    5. ```deactivate```
