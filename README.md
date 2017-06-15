@@ -8,7 +8,8 @@
 ### cuda 8.0 + cudnn v6.0 installtion see http://blog.csdn.net/autocyz/article/details/52299889.  
 * **Install nvidia driver**  
   1. Check your driver on http://www.nvidia.com/Download/index.aspx?lang=en-us  
-  2. ```
+  2.  
+     ```
      sudo add-apt-repository ppa:graphics-drivers/ppa  
      sudo apt-get update  
      sudo apt-get install nvidia-375 #your driver  
