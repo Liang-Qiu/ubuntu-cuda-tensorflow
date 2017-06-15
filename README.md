@@ -19,32 +19,41 @@
      nvidia-smi  
      nvidia-settings  
      ```  
-* **install cuda**  
-  	1. download cuda from https://developer.nvidia.com/cuda-release-candidate-download  
-	   sudo sh cuda_8.0.27_linux.run #your cuda runfile name  
-  	2. sudo vim ~/.bashrc, add the following lines:  
-  	   export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  
-  	   export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}  
-  	   sudo vim /etc/profile, add:   
-  	   export PATH=/usr/local/cuda/bin:$PATH  
-  	   sudo vim /etc/ld.so.conf.d/cuda.conf, add:  
-  	   /usr/local/cuda/lib64  
-	   sudo ldconfig  
-  		if error 'libEGL.so.1 is not a symbolic link ...', then  
-  		sudo mv /usr/lib/nvidia-375/libEGL.so.1 /usr/lib/nvidia-375/libEGL.so.1.org  
-  		sudo mv /usr/lib32/nvidia-375/libEGL.so.1 /usr/lib32/nvidia-375/libEGL.so.1.org  
-  		sudo ln -s /usr/lib/nvidia-375/libEGL.so.375.66 /usr/lib/nvidia-375/libEGL.so.1  
-  		sudo ln -s /usr/lib32/nvidia-375/libEGL.so.375.66 /usr/lib32/nvidia-375/libEGL.so.1  
-  		sudo ldconfig  
-  	3. test cuda samples:  
-  	   cd /usr/local/cuda-7.5/samples/1_Utilities/deviceQuery  
-  	   sudo make  
-  	   sudo ./deviceQuery  
+* **Install cuda**  
+  1. Download cuda from https://developer.nvidia.com/cuda-release-candidate-download  
+     ```sudo sh cuda_8.0.27_linux.run #your cuda runfile name```  
+  2. ```sudo vim ~/.bashrc```, add the following lines:   
+     ```
+     export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  
+     export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}  
+     ```
+     ```sudo vim /etc/profile```, add:   
+     export PATH=/usr/local/cuda/bin:$PATH  
+     ```sudo vim /etc/ld.so.conf.d/cuda.conf```, add:  
+     ```/usr/local/cuda/lib64```  
+     ```sudo ldconfig```    
+     if error 'libEGL.so.1 is not a symbolic link ...', then  
+     ```  
+     sudo mv /usr/lib/nvidia-375/libEGL.so.1 /usr/lib/nvidia-375/libEGL.so.1.org  
+     sudo mv /usr/lib32/nvidia-375/libEGL.so.1 /usr/lib32/nvidia-375/libEGL.so.1.org  
+     sudo ln -s /usr/lib/nvidia-375/libEGL.so.375.66 /usr/lib/nvidia-375/libEGL.so.1  
+     sudo ln -s /usr/lib32/nvidia-375/libEGL.so.375.66 /usr/lib32/nvidia-375/libEGL.so.1  
+     sudo ldconfig
+     ```  
+   3. test cuda samples:   
+   ```  
+   cd /usr/local/cuda-7.5/samples/1_Utilities/deviceQuery  
+   sudo make  
+   sudo ./deviceQuery  
+   ```  
 * **install cudnn**  
-	1. download cudnn from https://developer.nvidia.com/cudnn to ~/Downloads/  
-  	2. cd ~/Downloads/cuda/include/  
-  	   sudo cp cudnn.h /usr/local/cuda/include/  
-  	   cd ~/Downloads/cuda/lib64/  
-  	   sudo cp lib* /usr/local/cuda/lib64/    
-   	   cd /usr/local/cuda/lib64/  
-  	   sudo ln -s libcudnn.so.6.* libcudnn.so.5  
+  1. Download cudnn from https://developer.nvidia.com/cudnn to ~/Downloads/  
+  2.  
+  ```  
+  cd ~/Downloads/cuda/include/  
+  sudo cp cudnn.h /usr/local/cuda/include/  
+  cd ~/Downloads/cuda/lib64/  
+  sudo cp lib* /usr/local/cuda/lib64/    
+  cd /usr/local/cuda/lib64/  
+  sudo ln -s libcudnn.so.6.* libcudnn.so.5  
+  ```  
