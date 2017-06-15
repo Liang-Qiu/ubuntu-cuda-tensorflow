@@ -60,3 +60,21 @@
       cd /usr/local/cuda/lib64/  
       sudo ln -s libcudnn.so.6.* libcudnn.so.5  
       ```  
+* **Install tensorflow see https://www.tensorflow.org/install/install_linux** 
+  1. ```sudo apt-get install libcupti-dev```
+  2. Use virtualenv
+  3. ```sudo vim ~/.bashrc```, add the following lines: 
+     ```  
+     alias tfstart='source ~/tensorflow/bin/activate'   
+     ```  
+  4. Test tensorflow, type ```tfstart```
+     Write a python3 program test.py
+     ```
+     # Python
+     import tensorflow as tf
+     hello = tf.constant('Hello, TensorFlow!')
+     sess = tf.Session()
+     print(sess.run(hello))
+     ```
+     run ```python3 test.py```
+   5. ```deactivate```
