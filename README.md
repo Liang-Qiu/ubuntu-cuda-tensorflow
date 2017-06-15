@@ -35,8 +35,7 @@
      ```  
      /usr/local/cuda/lib64  
      ```  
-     ```sudo ldconfig```  
-     if error 'libEGL.so.1 is not a symbolic link ...', then  
+     ```sudo ldconfig``` If error 'libEGL.so.1 is not a symbolic link ...', then  
      ```  
      sudo mv /usr/lib/nvidia-375/libEGL.so.1 /usr/lib/nvidia-375/libEGL.so.1.org  
      sudo mv /usr/lib32/nvidia-375/libEGL.so.1 /usr/lib32/nvidia-375/libEGL.so.1.org  
@@ -52,7 +51,7 @@
       ```  
 * **install cudnn**  
   1. Download cudnn from https://developer.nvidia.com/cudnn to ~/Downloads/  
-  2.  
+  2. Type in terminal:  
       ```  
       cd ~/Downloads/cuda/include/  
       sudo cp cudnn.h /usr/local/cuda/include/  
