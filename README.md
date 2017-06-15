@@ -62,7 +62,7 @@
       ```  
 * **Install tensorflow see https://www.tensorflow.org/install/install_linux** 
   1. ```sudo apt-get install libcupti-dev```
-  2. Use virtualenv method
+  2. Use virtualenv method to install
   3. ```sudo vim ~/.bashrc```, add the following lines: 
      ```  
      alias tfstart='source ~/tensorflow/bin/activate'   
