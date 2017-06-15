@@ -18,15 +18,15 @@
      sudo reboot    
      nvidia-smi  
      nvidia-settings  
-     ```  
+     ```
 * **Install cuda**  
   1. Download cuda from https://developer.nvidia.com/cuda-release-candidate-download  
-     ```sudo sh cuda_8.0.27_linux.run #your cuda runfile name```  
+     ```sudo sh cuda_8.0.27_linux.run #your cuda runfile name```
   2. ```sudo vim ~/.bashrc```, add the following lines:   
-     ```  
+     ```
      export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  
      export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}  
-     ```  
+     ```
      ```sudo vim /etc/profile```, add:   
      ```  
      export PATH=/usr/local/cuda/bin:$PATH  
@@ -53,11 +53,11 @@
 * **install cudnn**  
   1. Download cudnn from https://developer.nvidia.com/cudnn to ~/Downloads/  
   2.  
-  ```  
-  cd ~/Downloads/cuda/include/  
-  sudo cp cudnn.h /usr/local/cuda/include/  
-  cd ~/Downloads/cuda/lib64/  
-  sudo cp lib* /usr/local/cuda/lib64/    
-  cd /usr/local/cuda/lib64/  
-  sudo ln -s libcudnn.so.6.* libcudnn.so.5  
-  ```  
+      ```  
+      cd ~/Downloads/cuda/include/  
+      sudo cp cudnn.h /usr/local/cuda/include/  
+      cd ~/Downloads/cuda/lib64/  
+      sudo cp lib* /usr/local/cuda/lib64/    
+      cd /usr/local/cuda/lib64/  
+      sudo ln -s libcudnn.so.6.* libcudnn.so.5  
+      ```  
