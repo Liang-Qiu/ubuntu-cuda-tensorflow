@@ -78,3 +78,4 @@
      ```
      then run ```python3 test.py```
    5. ```deactivate```
+### You are all set and ready to use tensorflow with GPU :)
