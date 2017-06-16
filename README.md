@@ -36,12 +36,16 @@
      export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  
      export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}    
      ```
-     ```sudo vim /etc/ld.so.conf.d/cuda.conf```  
+     ```  
+     sudo vim /etc/ld.so.conf.d/cuda.conf  
+     ```  
      and add:  
      ```  
      /usr/local/cuda/lib64  
      ```  
-     ```sudo ldconfig```  
+     ```
+     sudo ldconfig
+     ```  
      If error 'libEGL.so.1 is not a symbolic link ...', then    
      ```  
      sudo mv /usr/lib/nvidia-375/libEGL.so.1 /usr/lib/nvidia-375/libEGL.so.1.org  
