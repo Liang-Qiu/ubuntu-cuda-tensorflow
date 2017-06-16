@@ -25,17 +25,18 @@
      ```
      sudo sh cuda_8.0.27_linux.run #your cuda runfile name
      ```
-     ** Select no when prompt to install graphics driver! **
-  2. ```
+     **Select no when prompted to install graphics driver!**
+  2. Set environment variables
+     ```
      cd /etc/profile.d
      vim cuda.sh
-     ```
-     In the opened cuda.sh add the following lines:   
+     ```  
+     In the opened cuda.sh add the following lines:  
      ```
      export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  
-     export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}  
+     export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}    
      ```
-     ```sudo vim /etc/ld.so.conf.d/cuda.conf``` and add:  
+     ```sudo vim /etc/ld.so.conf.d/cuda.conf``` and add:    
      ```  
      /usr/local/cuda/lib64  
      ```  
@@ -47,12 +48,12 @@
      sudo ln -s /usr/lib32/nvidia-375/libEGL.so.375.66 /usr/lib32/nvidia-375/libEGL.so.1  
      sudo ldconfig  
      ```  
-   3. test cuda samples:   
-      ```
-      cd /usr/local/cuda-7.5/samples/1_Utilities/deviceQuery  
-      sudo make  
-      sudo ./deviceQuery  
-      ```  
+  3. test cuda samples:  
+     ```
+     cd /usr/local/cuda-7.5/samples/1_Utilities/deviceQuery  
+     sudo make  
+     sudo ./deviceQuery  
+     ```  
 * **install cudnn**  
   1. Download cudnn from https://developer.nvidia.com/cudnn to ~/Downloads/  
   2. Type in terminal:  
