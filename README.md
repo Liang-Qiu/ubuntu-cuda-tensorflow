@@ -54,7 +54,7 @@
      sudo make  
      sudo ./deviceQuery  
      ```  
-* **install cudnn**  
+* **Install cudnn**  
   1. Download cudnn from https://developer.nvidia.com/cudnn to ~/Downloads/  
   2. Type in terminal:  
       ```  
