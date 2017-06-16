@@ -48,7 +48,7 @@
      sudo ln -s /usr/lib32/nvidia-375/libEGL.so.375.66 /usr/lib32/nvidia-375/libEGL.so.1  
      sudo ldconfig  
      ```  
-  3. test cuda samples:  
+  3. Test cuda samples:  
      ```
      cd /usr/local/cuda-7.5/samples/1_Utilities/deviceQuery  
      sudo make  
