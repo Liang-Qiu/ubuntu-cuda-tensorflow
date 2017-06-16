@@ -24,6 +24,9 @@
   1. Download cuda from https://developer.nvidia.com/cuda-release-candidate-download  
      ```
      sudo sh cuda_8.0.27_linux.run #your cuda runfile name
+     ```
+     * Select no when prompt to install graphics driver!
+  2. ```
      cd /etc/profile.d
      vim cuda.sh
      ```
