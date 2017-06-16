@@ -25,7 +25,7 @@
      ```
      sudo sh cuda_8.0.27_linux.run #your cuda runfile name
      ```
-     * Select no when prompt to install graphics driver!
+     ** Select no when prompt to install graphics driver! **
   2. ```
      cd /etc/profile.d
      vim cuda.sh
@@ -81,4 +81,4 @@
      ```
      then run ```python3 test.py``` you should see "Hello, TensorFlow!"
    5. ```deactivate```
-### Now you are all set and ready to use tensorflow with GPU :)
+### Now you are all set and ready to use tensorflow with GPU : )
