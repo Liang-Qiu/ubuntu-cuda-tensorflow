@@ -22,17 +22,17 @@
      ```
 * **Install cuda**  
   1. Download cuda from https://developer.nvidia.com/cuda-release-candidate-download  
-     ```sudo sh cuda_8.0.27_linux.run #your cuda runfile name```
-  2. ```
+     ```
+     sudo sh cuda_8.0.27_linux.run #your cuda runfile name
      cd /etc/profile.d
      vim cuda.sh
      ```
-     , add the following lines:   
+     In the opened cuda.sh add the following lines:   
      ```
      export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  
      export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}  
      ```
-     ```sudo vim /etc/ld.so.conf.d/cuda.conf```, add:  
+     ```sudo vim /etc/ld.so.conf.d/cuda.conf``` and add:  
      ```  
      /usr/local/cuda/lib64  
      ```  
@@ -76,6 +76,6 @@
      sess = tf.Session()
      print(sess.run(hello))
      ```
-     then run ```python3 test.py```
+     then run ```python3 test.py``` you should see "Hello, TensorFlow!"
    5. ```deactivate```
-### You are all set and ready to use tensorflow with GPU :)
+### Now you are all set and ready to use tensorflow with GPU :)
