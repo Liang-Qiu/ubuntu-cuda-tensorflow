@@ -4,6 +4,7 @@
 * Disable fast boot and secure boot (Bios -> boot -> secure boot -> key management -> clear key)   
 * Give /boot more space, maybe 1 GB   
 * Don't use EasyBCD  
+* Disable ubuntu update (System Settings -> Software & Updates -> Updates -> Notify me of a new Ubuntu version: Never)
   
 ### cuda 8.0 + cudnn v6.0 installtion see http://blog.csdn.net/autocyz/article/details/52299889.  
 * **Install nvidia driver**  
@@ -22,15 +23,15 @@
 * **Install cuda**  
   1. Download cuda from https://developer.nvidia.com/cuda-release-candidate-download  
      ```sudo sh cuda_8.0.27_linux.run #your cuda runfile name```
-  2. ```sudo vim ~/.bashrc```, add the following lines:   
+  2. ```
+     cd /etc/profile.d
+     vim cuda.sh
+     ```
+     , add the following lines:   
      ```
      export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  
      export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}  
      ```
-     ```sudo vim /etc/profile```, add:   
-     ```  
-     export PATH=/usr/local/cuda/bin:$PATH  
-     ```  
      ```sudo vim /etc/ld.so.conf.d/cuda.conf```, add:  
      ```  
      /usr/local/cuda/lib64  
