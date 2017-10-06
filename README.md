@@ -29,7 +29,7 @@
   2. Set environment variables
      ```
      cd /etc/profile.d
-     vim cuda.sh
+     sudo vim cuda.sh
      ```  
      In the opened cuda.sh add the following lines:  
      ```
@@ -74,7 +74,7 @@
 * **Install tensorflow see https://www.tensorflow.org/install/install_linux** 
   1. ```sudo apt-get install libcupti-dev```
   2. Use virtualenv method to install
-  3. ```sudo vim ~/.bashrc```, add the following lines: 
+  3. ```sudo vim ~/.bash_aliases```, add the following lines: 
      ```  
      alias tfstart='source ~/tensorflow/bin/activate'   
      ```  
