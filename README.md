@@ -11,6 +11,7 @@
   1. Check your driver on http://www.nvidia.com/Download/index.aspx?lang=en-us  
   2. Open a terminal and type: 
      ```
+     sudo apt-get purge nvidia* (optional)
      sudo add-apt-repository ppa:graphics-drivers/ppa  
      sudo apt-get update  
      sudo apt-get install nvidia-375 #your driver  
